@@ -350,4 +350,41 @@ nav {
     flex-shrink: 1;
     flex-basis: 0%;
   }
+
+  .hebergements-and-populaires {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+
+  .hebergements-and-populaires section {
+    border-radius: 0;
+    padding: 30px 20px 30px 20px;
+  }
+  .populaires {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .populaires-title {
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .section-title {
+    margin-bottom: 0;
+  }
+
+  .populaires-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .populaires-cards .card {
+    display: flex;
+    margin-top: 0;
+  }
+  .populaires-cards a {
+    width: 100%;
+  }
 }
