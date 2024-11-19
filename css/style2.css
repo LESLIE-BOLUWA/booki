@@ -53,6 +53,8 @@ nav {
   color: var(--main-color);
 }
 
+/* INFO GROUP */
+
 .info-group {
   display: flex;
   flex-direction: column;
@@ -261,4 +263,50 @@ nav {
 .footer h2 {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+/* Small devices (phones, less than 768px) */
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .main-container {
+    padding: 0;
+    max-width: 767.98px;
+    min-width: 320px;
+  }
+
+  /*  BLOC HEADER */
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 115px;
+  }
+  .logo {
+    padding: 30px;
+  }
+
+  nav {
+    align-self: unset;
+    width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    gap: 0px;
+  }
+  .menu li {
+    flex-basis: 50%;
+    padding-top: 0;
+    padding-bottom: 15px;
+  }
+  .menu li:hover {
+    border-top: none;
+    color: var(--main-color);
+    border-bottom: 1px solid;
+  }
+
+  /* INFO GROUP */
+  .info-group {
+    padding: 0 20px 0 20px;
+  }
 }
