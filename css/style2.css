@@ -203,13 +203,34 @@ nav {
   gap: 30px;
 }
 
-.card-hebergement div {
-  padding: 0 10px 0 10px;
+.hebergement-cards .card-title {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  line-height: 18.78px;
 }
 
-.card-hebergement img {
+.hebergement-cards .card-subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16.44px;
+  font-weight: 400;
+}
+
+.hebergement-cards .card-rating {
+  height: 14.535px;
+  margin-bottom: 10px;
+}
+
+.hebergement-cards .card-content {
+  padding: 0 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hebergement-cards img {
   min-width: 240.33px;
-  height: 124px;
+  height: 114px;
   border-radius: 20px 20px 0px 0px;
   box-sizing: border-box;
 }
@@ -404,7 +425,7 @@ nav {
     padding-bottom: 15px;
   }
 
-  .card-hebergement img {
+  .hebergement-cards img {
     width: 100%;
     border-radius: 20px 20px 0px 0px;
   }
