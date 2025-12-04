@@ -289,24 +289,137 @@ nav {
 }
 
 /* ACTIVITÉS – version tablette : 4 cartes sur une ligne */
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .Activites {
     display: flex;
-    flex-wrap: nowrap; /* on empêche le retour à la ligne */
+    flex-wrap: nowrap;
     gap: 30px;
   }
 
   .Activites a {
-    flex: 1; /* chaque lien prend 1/4 de la ligne */
+    flex: 1;
   }
 
   .card-activites {
-    width: 100%; /* la carte remplit son flex */
+    width: 100%;
   }
 
   .card-activites img {
-    width: 100%; /* l'image prend toute la largeur de la carte */
-    height: 260px; /* un peu plus petite qu'en desktop */
-    object-fit: cover; /* recadrage propre et propre */
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+}
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* === CONFIG GENERALE === */
+
+  body {
+    margin: 0;
+  }
+
+  .main-container {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* === HEADER MOBILE === */
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    margin: 20px 0 10px 0;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .menu {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    flex: 1; /* occupe 50% chacun */
+    list-style: none;
+    text-align: center;
+    padding: 15px 0;
+    border-top: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .menu li:hover {
+    border-bottom: 2px solid var(--main-color);
+    color: var(--main-color);
+  }
+
+  /* === INFO GROUP === */
+
+  .info-group {
+    gap: 20px;
+  }
+
+  /* === BARRE DE RECHERCHE === */
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-bar .search-input {
+    flex: 1;
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  /* === FILTRES === */
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  /* === HÉBERGEMENTS & POPULAIRES === */
+
+  /* Cartes hébergements / populaires / activités en colonne, largeur 335px */
+  .hebergement-cards,
+  .populaires-cards,
+  .Activites {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* on centre les enfants */
+  }
+
+  .hebergement-cards a,
+  .populaires-cards a,
+  .Activites a {
+    width: 335px;
+    max-width: 100%;
+    display: block;
+  }
+
+  /* === FOOTER === */
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
   }
 }
