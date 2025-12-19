@@ -349,6 +349,7 @@ nav {
   .menu li:hover {
     border-bottom: 2px solid var(--main-color);
     color: var(--main-color);
+    border-top: none;
   }
   main {
     display: flex;
