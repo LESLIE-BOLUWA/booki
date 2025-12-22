@@ -346,11 +346,18 @@ nav {
     padding-bottom: 15px;
   }
 
-  .menu li:hover {
+  .menu li:hover,
+  .menu li.active {
     border-bottom: 2px solid var(--main-color);
     color: var(--main-color);
     border-top: none;
   }
+
+  .menu li:not(.active):not(:hover) {
+    border-bottom: 2px solid #f2f2f2;
+    color: black;
+  }
+
   main {
     display: flex;
     flex-direction: column;
@@ -395,11 +402,31 @@ nav {
   .filter-bar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
   }
 
   .filter-bar span {
     grid-column: span 2;
+  }
+
+  .filter-bar .filter {
+    font-size: 14px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: unset;
+    padding-bottom: unset;
+    padding-right: unset;
+    gap: 10px;
+  }
+
+  .filter-bar .filter i {
+    margin-right: 0;
+    height: unset;
+  }
+
+  .filter-bar .filter i:before {
+    font-size: 18px;
   }
 
   /* === HÉBERGEMENTS & POPULAIRES === */
@@ -470,5 +497,6 @@ nav {
   }
   .card-activites img {
     width: 100%;
+    height: auto;
   }
 }
